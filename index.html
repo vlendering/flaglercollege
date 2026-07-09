@@ -1,301 +1,318 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260709-01-d8fce8b"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flagler College Email Signature Builder</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <script src="/_sdk/8650958800d6c92a.element_sdk.js" integrity="sha512-zFMhEG5W24TdVhhc4yw+K4kKrl6mClLz7Nz7OlZcKY64bZTx26LpVI6mwMCarQMzfrHe8i4fBMu4fxoFej2m9g=="></script>
   <style>
-html, body { height: 100%; margin: 0; }
-.hidden { display: none !important; }
-</style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
- </head>
- <body class="bg-white" style="font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0;">
+    html, body { height: 100%; margin: 0; }
+    .hidden { display: none !important; }
+    body { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100">
   <div class="w-full overflow-auto p-5 md:p-10" style="min-height: 100vh;">
-   <div class="max-w-[1100px] mx-auto">
-    <div class="bg-white p-6 md:p-8 rounded-xl mb-8">
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Full Name</label> <input type="text" data-target="sigName" data-mobile-target="mobileSigName" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Title</label> <input type="text" data-target="sigTitle" data-mobile-target="mobileSigTitle" placeholder="Job Title" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Department</label> <input type="text" data-target="sigDept" data-mobile-target="mobileSigDept" placeholder="Department Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleDivision"> <span>Show division</span>
-       </div>
-       <div id="divisionFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Division</label> <input type="text" data-target="sigDivision" data-mobile-target="mobileSigDivision" placeholder="Division Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-       </div>
-      </div>
-      <div>
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleSpecialtyOne"> <span>Show specialty line 1</span>
-       </div>
-       <div id="specialtyOneFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 1</label> <input type="text" data-target="sigSpecialtyOne" data-mobile-target="mobileSigSpecialtyOne" placeholder="Specialty or focus area" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-       </div>
-      </div>
-      <div>
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleSpecialtyTwo"> <span>Show specialty line 2</span>
-       </div>
-       <div id="specialtyTwoFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 2</label> <input type="text" data-target="sigSpecialtyTwo" data-mobile-target="mobileSigSpecialtyTwo" placeholder="Additional specialty or certification" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-       </div>
-      </div>
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Phone Number</label> <input type="text" data-target="sigPhone" data-mobile-target="mobileSigPhone" placeholder="000-000-0000" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Email Address</label> <input type="text" data-target="sigEmail" data-mobile-target="mobileSigEmail" placeholder="email@flagler.edu" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <label class="block mt-4 mb-1 font-bold text-sm">Mailing Address</label> <input type="text" data-target="sigMailing" data-mobile-target="mobileSigMailing" value="74 King Street, St. Augustine, FL 32084" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-      </div>
-      <div>
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleOffice"> <span>Show office address</span>
-       </div>
-       <div id="officeFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Office Address</label> <input type="text" data-target="sigOffice" data-mobile-target="mobileSigOffice" placeholder="Office Location" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-       </div>
-      </div>
-      <div>
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleAppointment"> <span>Show Book Appointment button</span>
-       </div>
-       <div id="appointmentFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Appointment Link</label> <input type="url" id="appointmentInput" placeholder="https://calendly.com/name/meeting" class="w-full p-3 border border-gray-300 rounded-md text-sm">
-        <p class="text-xs text-gray-500 mt-1">Paste a Calendly, Microsoft Bookings, or scheduling link.</p>
-       </div>
-      </div>
-      <div class="md:col-span-2">
-       <div class="flex items-center gap-2 mt-4 text-sm font-bold">
-        <input type="checkbox" id="toggleDisclaimer"> <span>Show legal disclaimer</span>
-       </div>
-       <div id="disclaimerFieldGroup" class="hidden">
-        <label class="block mt-2 mb-1 font-bold text-sm">Legal Disclaimer</label> <input type="text" data-target="sigDisclaimer" data-mobile-target="mobileSigDisclaimer" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed..." class="w-full p-3 border border-gray-300 rounded-md text-sm">
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="bg-white p-6 md:p-8 rounded-xl shadow-md mb-8">
-     <h2 class="text-xl font-bold mb-4" style="color:#7A0019;">Desktop Signature</h2>
-     <div class="border border-gray-200 p-6 bg-white overflow-auto mb-6 shadow-sm">
-      <div id="signatureToCopy">
-       <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial, Helvetica, sans-serif; color:#222222; border-collapse:collapse;">
-        <tbody>
-         <tr>
-          <td style="vertical-align:top; padding-right:12px;"><img src="https://www.dropbox.com/scl/fi/7ef45vp7chp0bc4264y3m/FlaglerCollege-DropFlag_Taller.png?rlkey=usxpb6uyfam57rdxrz2op8yvb&amp;raw=1" alt="Flagler College" style="max-height:150px; width:auto; display:block; border:0;" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#7A0019'; this.style.width='60px'; this.style.height='150px'; this.alt='Flagler College';"></td>
-          <td style="vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
-           <div style="font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#7A0019; line-height:1.2;"><span id="sigName">Full Name</span>
-           </div>
-           <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; margin-top:4px; font-style:italic;"><span id="sigTitle">Job Title</span>
-           </div>
-           <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;"><span id="sigDept">Department Name</span>
-           </div>
-           <div id="divisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="sigDivision"></span>
-           </div>
-           <div id="specialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;"><span id="sigSpecialtyOne"></span>
-           </div>
-           <div id="specialtyTwoRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="sigSpecialtyTwo"></span>
-           </div>
-           <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px; line-height:1.5;">
-            <strong>P:</strong> <span id="sigPhone">000-000-0000</span> <span style="color:#999999;"> | </span> <strong>E:</strong> <a id="sigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"><span id="sigEmail">email@flagler.edu</span></a>
-           </div>
-           <div style="font-family:Arial, Helvetica, sans-serif; margin-top:8px; font-size:13px; line-height:1.45;">
-            <div id="officeRow" class="hidden"><strong>Office:</strong> <span id="sigOffice"></span>
+    <div class="max-w-[1100px] mx-auto">
+      <!-- Input Form -->
+      <div class="bg-white p-6 md:p-8 rounded-xl mb-8 shadow-md">
+        <h1 class="text-2xl font-bold mb-6" style="color:#7A0019;">Email Signature Builder</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Full Name</label>
+            <input type="text" id="sigName" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Title</label>
+            <input type="text" id="sigTitle" placeholder="Job Title" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Department</label>
+            <input type="text" id="sigDept" placeholder="Department Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleDivision"> <span>Show division</span>
             </div>
-            <div id="mailingRow"><strong>Mailing:</strong> <span id="sigMailing">74 King Street, St. Augustine, FL 32084</span>
+            <div id="divisionFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Division</label>
+              <input type="text" id="sigDivision" placeholder="Division Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
-           </div>
-           <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px;">
-            <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
-           </div>
-           <div id="appointmentRow" class="hidden" style="margin-top:10px;">
-            <a id="sigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
-           </div></td>
-         </tr>
-        </tbody>
-       </table>
-       <div id="disclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
-        <span id="sigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you received this message in error, please notify the sender and delete it.</span>
-       </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleSpecialtyOne"> <span>Show specialty line 1</span>
+            </div>
+            <div id="specialtyOneFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 1</label>
+              <input type="text" id="sigSpecialtyOne" placeholder="Specialty or focus area" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleSpecialtyTwo"> <span>Show specialty line 2</span>
+            </div>
+            <div id="specialtyTwoFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 2</label>
+              <input type="text" id="sigSpecialtyTwo" placeholder="Additional specialty or certification" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+            </div>
+          </div>
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Phone Number</label>
+            <input type="text" id="sigPhone" placeholder="000-000-0000" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Email Address</label>
+            <input type="text" id="sigEmail" placeholder="email@flagler.edu" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <label class="block mt-4 mb-1 font-bold text-sm">Mailing Address</label>
+            <input type="text" id="sigMailing" value="74 King Street, St. Augustine, FL 32084" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleOffice"> <span>Show office address</span>
+            </div>
+            <div id="officeFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Office Address</label>
+              <input type="text" id="sigOffice" placeholder="Office Location" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleAppointment"> <span>Show Book Appointment button</span>
+            </div>
+            <div id="appointmentFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Appointment Link</label>
+              <input type="url" id="appointmentInput" placeholder="https://calendly.com/name/meeting" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <p class="text-xs text-gray-500 mt-1">Paste a Calendly, Microsoft Bookings, or scheduling link.</p>
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2 mt-4 text-sm font-bold">
+              <input type="checkbox" id="toggleDisclaimer"> <span>Show legal disclaimer</span>
+            </div>
+            <div id="disclaimerFieldGroup" class="hidden">
+              <label class="block mt-2 mb-1 font-bold text-sm">Legal Disclaimer</label>
+              <input type="text" id="sigDisclaimer" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed..." class="w-full p-3 border border-gray-300 rounded-md text-sm">
+            </div>
+          </div>
+        </div>
       </div>
-     </div><button id="copySignature" class="w-full py-3 px-4 rounded-md text-white font-bold text-sm cursor-pointer" style="background:#94002a;">Copy Desktop Signature</button>
-     <div id="copyMessage" class="mt-3 text-green-600 text-sm"></div>
-     <h2 class="text-xl font-bold mt-10 mb-1" style="color:#7A0019;">Mobile Signature</h2>
-     <p class="text-sm text-gray-500 mb-4">Simplified version for mobile email apps only.</p>
-     <div class="border border-gray-200 p-6 bg-white overflow-auto mb-6">
-      <div id="mobileSignatureToCopy">
-       <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.45; color:#222222;">
-        <div style="font-family:Arial, Helvetica, sans-serif; font-size:17px; font-weight:bold; color:#7A0019; line-height:1.2;"><span id="mobileSigName">Full Name</span>
+
+      <!-- Desktop Signature Preview -->
+      <div class="bg-white p-6 md:p-8 rounded-xl shadow-md mb-8">
+        <h2 class="text-xl font-bold mb-4" style="color:#7A0019;">Desktop Signature</h2>
+        <div class="border border-gray-200 p-6 bg-white overflow-auto mb-6 shadow-sm">
+          <div id="signatureToCopy">
+            <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial, Helvetica, sans-serif; color:#222222; border-collapse:collapse;">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top; padding-right:12px;"><img src="https://www.dropbox.com/scl/fi/7ef45vp7chp0bc4264y3m/FlaglerCollege-DropFlag_Taller.png?rlkey=usxpb6uyfam57rdxrz2op8yvb&raw=1" alt="Flagler College" style="max-height:150px; width:auto; display:block; border:0;" loading="lazy"></td>
+                  <td style="vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
+                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#7A0019; line-height:1.2;"><span id="preview-sigName">Full Name</span></div>
+                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; margin-top:4px; font-style:italic;"><span id="preview-sigTitle">Job Title</span></div>
+                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;"><span id="preview-sigDept">Department Name</span></div>
+                    <div id="preview-divisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="preview-sigDivision"></span></div>
+                    <div id="preview-specialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;"><span id="preview-sigSpecialtyOne"></span></div>
+                    <div id="preview-specialtyTwoRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="preview-sigSpecialtyTwo"></span></div>
+                    <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px; line-height:1.5;">
+                      <strong>P:</strong> <span id="preview-sigPhone">000-000-0000</span> <span style="color:#999999;"> | </span> <strong>E:</strong> <a id="preview-sigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"><span id="preview-sigEmail">email@flagler.edu</span></a>
+                    </div>
+                    <div style="font-family:Arial, Helvetica, sans-serif; margin-top:8px; font-size:13px; line-height:1.45;">
+                      <div id="preview-officeRow" class="hidden"><strong>Office:</strong> <span id="preview-sigOffice"></span></div>
+                      <div id="preview-mailingRow"><strong>Mailing:</strong> <span id="preview-sigMailing">74 King Street, St. Augustine, FL 32084</span></div>
+                    </div>
+                    <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px;">
+                      <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
+                    </div>
+                    <div id="preview-appointmentRow" class="hidden" style="margin-top:10px;">
+                      <a id="preview-sigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="preview-disclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
+              <span id="preview-sigDisclaimer"></span>
+            </div>
+          </div>
         </div>
-        <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; font-style:italic; margin-top:3px;"><span id="mobileSigTitle">Job Title</span>
-        </div>
-        <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;"><span id="mobileSigDept">Department Name</span>
-        </div>
-        <div id="mobileDivisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="mobileSigDivision"></span>
-        </div>
-        <div id="mobileSpecialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;"><span id="mobileSigSpecialtyOne"></span>
-        </div>
-        <div id="mobileSpecialtyTwoRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="mobileSigSpecialtyTwo"></span>
-        </div>
-        <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:10px;">
-         <strong>P:</strong> <span id="mobileSigPhone">000-000-0000</span><br><strong>E:</strong> <a id="mobileSigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"><span id="mobileSigEmail">email@flagler.edu</span></a>
-        </div>
-        <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:8px;">
-         <div id="mobileOfficeRow" class="hidden"><strong>Office:</strong> <span id="mobileSigOffice"></span>
-         </div>
-         <div><strong>Mailing:</strong> <span id="mobileSigMailing">74 King Street, St. Augustine, FL 32084</span>
-         </div>
-        </div>
-        <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px;">
-         <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
-        </div>
-        <div id="mobileAppointmentRow" class="hidden" style="margin-top:10px;">
-         <a id="mobileSigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
-        </div>
-        <div id="mobileDisclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
-         <span id="mobileSigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you received this message in error, please notify the sender and delete it.</span>
-        </div>
-       </div>
+        <button id="copySignature" class="w-full py-3 px-4 rounded-md text-white font-bold text-sm cursor-pointer" style="background:#94002a;">Copy Desktop Signature</button>
+        <div id="copyMessage" class="mt-3 text-green-600 text-sm"></div>
       </div>
-     </div><button id="copyMobileSignature" class="w-full py-3 px-4 rounded-md text-white font-bold text-sm cursor-pointer bg-gray-700">Copy Mobile Signature — Mobile Use Only</button>
-     <div id="copyMobileMessage" class="mt-3 text-green-600 text-sm"></div>
+
+      <!-- Mobile Signature Preview -->
+      <div class="bg-white p-6 md:p-8 rounded-xl shadow-md mb-8">
+        <h2 class="text-xl font-bold mb-4" style="color:#7A0019;">Mobile Signature</h2>
+        <p class="text-sm text-gray-500 mb-4">Simplified version for mobile email apps only.</p>
+        <div class="border border-gray-200 p-6 bg-white overflow-auto mb-6">
+          <div id="mobileSignatureToCopy">
+            <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.45; color:#222222;">
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:17px; font-weight:bold; color:#7A0019; line-height:1.2;"><span id="preview-mobileSigName">Full Name</span></div>
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; font-style:italic; margin-top:3px;"><span id="preview-mobileSigTitle">Job Title</span></div>
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333;"><span id="preview-mobileSigDept">Department Name</span></div>
+              <div id="preview-mobileDivisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="preview-mobileSigDivision"></span></div>
+              <div id="preview-mobileSpecialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;"><span id="preview-mobileSigSpecialtyOne"></span></div>
+              <div id="preview-mobileSpecialtyTwoRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;"><span id="preview-mobileSigSpecialtyTwo"></span></div>
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:10px;">
+                <strong>P:</strong> <span id="preview-mobileSigPhone">000-000-0000</span><br><strong>E:</strong> <a id="preview-mobileSigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"><span id="preview-mobileSigEmail">email@flagler.edu</span></a>
+              </div>
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:8px;">
+                <div id="preview-mobileOfficeRow" class="hidden"><strong>Office:</strong> <span id="preview-mobileSigOffice"></span></div>
+                <div><strong>Mailing:</strong> <span id="preview-mobileSigMailing">74 King Street, St. Augustine, FL 32084</span></div>
+              </div>
+              <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px;">
+                <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
+              </div>
+              <div id="preview-mobileAppointmentRow" class="hidden" style="margin-top:10px;">
+                <a id="preview-mobileSigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
+              </div>
+              <div id="preview-mobileDisclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
+                <span id="preview-mobileSigDisclaimer"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="copyMobileSignature" class="w-full py-3 px-4 rounded-md text-white font-bold text-sm cursor-pointer bg-gray-700">Copy Mobile Signature</button>
+        <div id="copyMobileMessage" class="mt-3 text-green-600 text-sm"></div>
+      </div>
     </div>
-   </div>
   </div>
+
   <script>
-// Element SDK setup
-const defaultConfig = {
-    page_title: "Flagler College Email Signature Builder",
-    background_color: "#f4f4f4",
-    panel_color: "#ffffff",
-    text_color: "#222222",
-    accent_color: "#7A0019",
-    button_color: "#94002a",
-    font_family: "Arial"
-};
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      // Input field IDs
+      const inputs = {
+        name: document.getElementById('sigName'),
+        title: document.getElementById('sigTitle'),
+        dept: document.getElementById('sigDept'),
+        division: document.getElementById('sigDivision'),
+        specialtyOne: document.getElementById('sigSpecialtyOne'),
+        specialtyTwo: document.getElementById('sigSpecialtyTwo'),
+        phone: document.getElementById('sigPhone'),
+        email: document.getElementById('sigEmail'),
+        mailing: document.getElementById('sigMailing'),
+        office: document.getElementById('sigOffice'),
+        appointment: document.getElementById('appointmentInput'),
+        disclaimer: document.getElementById('sigDisclaimer')
+      };
 
-window.elementSdk.init({
-    defaultConfig,
-    onConfigChange: async (config) => {
-        const title = config.page_title || defaultConfig.page_title;
-        const bg = config.background_color || defaultConfig.background_color;
-        const panel = config.panel_color || defaultConfig.panel_color;
-        const text = config.text_color || defaultConfig.text_color;
-        const accent = config.accent_color || defaultConfig.accent_color;
-        const btn = config.button_color || defaultConfig.button_color;
-        const font = config.font_family || defaultConfig.font_family;
+      // Toggle checkboxes
+      const toggles = {
+        division: document.getElementById('toggleDivision'),
+        specialtyOne: document.getElementById('toggleSpecialtyOne'),
+        specialtyTwo: document.getElementById('toggleSpecialtyTwo'),
+        office: document.getElementById('toggleOffice'),
+        appointment: document.getElementById('toggleAppointment'),
+        disclaimer: document.getElementById('toggleDisclaimer')
+      };
 
-        document.getElementById('pageTitle').textContent = title;
-        document.body.style.backgroundColor = bg;
-        document.body.style.fontFamily = `${font}, Arial, sans-serif`;
-        document.querySelectorAll('.bg-white').forEach(el => el.style.backgroundColor = panel);
-        document.getElementById('pageTitle').style.color = accent;
-        document.querySelectorAll('h2').forEach(el => el.style.color = accent);
-        document.getElementById('copySignature').style.backgroundColor = btn;
-    },
-    mapToCapabilities: (config) => ({
-        recolorables: [
-            { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
-            { get: () => config.panel_color || defaultConfig.panel_color, set: (v) => { config.panel_color = v; window.elementSdk.setConfig({ panel_color: v }); } },
-            { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
-            { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } },
-            { get: () => config.button_color || defaultConfig.button_color, set: (v) => { config.button_color = v; window.elementSdk.setConfig({ button_color: v }); } }
-        ],
-        borderables: [],
-        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
-        fontSizeable: undefined
-    }),
-    mapToEditPanelValues: (config) => new Map([
-        ["page_title", config.page_title || defaultConfig.page_title]
-    ])
-});
+      // Update preview when input changes
+      function updatePreview() {
+        // Desktop
+        document.getElementById('preview-sigName').textContent = inputs.name.value || inputs.name.placeholder;
+        document.getElementById('preview-sigTitle').textContent = inputs.title.value || inputs.title.placeholder;
+        document.getElementById('preview-sigDept').textContent = inputs.dept.value || inputs.dept.placeholder;
+        document.getElementById('preview-sigDivision').textContent = inputs.division.value;
+        document.getElementById('preview-sigSpecialtyOne').textContent = inputs.specialtyOne.value;
+        document.getElementById('preview-sigSpecialtyTwo').textContent = inputs.specialtyTwo.value;
+        document.getElementById('preview-sigPhone').textContent = inputs.phone.value || inputs.phone.placeholder;
+        document.getElementById('preview-sigEmail').textContent = inputs.email.value || inputs.email.placeholder;
+        document.getElementById('preview-sigMailing').textContent = inputs.mailing.value;
+        document.getElementById('preview-sigOffice').textContent = inputs.office.value;
+        document.getElementById('preview-sigDisclaimer').textContent = inputs.disclaimer.value;
 
-// Signature builder logic
-const fieldPairs = [
-    ["sigName","mobileSigName"],["sigTitle","mobileSigTitle"],["sigDept","mobileSigDept"],
-    ["sigDivision","mobileSigDivision"],["sigSpecialtyOne","mobileSigSpecialtyOne"],
-    ["sigSpecialtyTwo","mobileSigSpecialtyTwo"],["sigPhone","mobileSigPhone"],
-    ["sigEmail","mobileSigEmail"],["sigOffice","mobileSigOffice"],
-    ["sigMailing","mobileSigMailing"],["sigDisclaimer","mobileSigDisclaimer"]
-];
+        // Mobile
+        document.getElementById('preview-mobileSigName').textContent = inputs.name.value || inputs.name.placeholder;
+        document.getElementById('preview-mobileSigTitle').textContent = inputs.title.value || inputs.title.placeholder;
+        document.getElementById('preview-mobileSigDept').textContent = inputs.dept.value || inputs.dept.placeholder;
+        document.getElementById('preview-mobileSigDivision').textContent = inputs.division.value;
+        document.getElementById('preview-mobileSigSpecialtyOne').textContent = inputs.specialtyOne.value;
+        document.getElementById('preview-mobileSigSpecialtyTwo').textContent = inputs.specialtyTwo.value;
+        document.getElementById('preview-mobileSigPhone').textContent = inputs.phone.value || inputs.phone.placeholder;
+        document.getElementById('preview-mobileSigEmail').textContent = inputs.email.value || inputs.email.placeholder;
+        document.getElementById('preview-mobileSigMailing').textContent = inputs.mailing.value;
+        document.getElementById('preview-mobileSigOffice').textContent = inputs.office.value;
+        document.getElementById('preview-mobileSigDisclaimer').textContent = inputs.disclaimer.value;
 
-document.querySelectorAll("input[data-target]").forEach(input => {
-    input.addEventListener("input", () => {
-        const value = input.value || input.placeholder || "";
-        const desktopTarget = document.getElementById(input.dataset.target);
-        if (desktopTarget) desktopTarget.textContent = value;
-        const pair = fieldPairs.find(p => p[0] === input.dataset.target);
-        if (pair) { const mt = document.getElementById(pair[1]); if (mt) mt.textContent = value; }
-        if (input.dataset.target === "sigEmail") {
-            document.getElementById("sigEmailLink").href = "mailto:" + value;
-            document.getElementById("mobileSigEmailLink").href = "mailto:" + value;
+        // Update email links
+        const emailValue = inputs.email.value || inputs.email.placeholder;
+        document.getElementById('preview-sigEmailLink').href = 'mailto:' + emailValue;
+        document.getElementById('preview-mobileSigEmailLink').href = 'mailto:' + emailValue;
+
+        // Update appointment links
+        const appointmentValue = inputs.appointment.value || '#';
+        document.getElementById('preview-sigAppointmentLink').href = appointmentValue;
+        document.getElementById('preview-mobileSigAppointmentLink').href = appointmentValue;
+      }
+
+      // Setup toggle handlers
+      function setupToggle(toggleElement, fieldGroupId, desktopRowId, mobileRowId) {
+        if (!toggleElement) return;
+        toggleElement.addEventListener('change', function() {
+          const fieldGroup = document.getElementById(fieldGroupId);
+          const desktopRow = document.getElementById(desktopRowId);
+          const mobileRow = document.getElementById(mobileRowId);
+          
+          if (this.checked) {
+            fieldGroup.classList.remove('hidden');
+            desktopRow.classList.remove('hidden');
+            mobileRow.classList.remove('hidden');
+          } else {
+            fieldGroup.classList.add('hidden');
+            desktopRow.classList.add('hidden');
+            mobileRow.classList.add('hidden');
+          }
+          updatePreview();
+        });
+      }
+
+      setupToggle(toggles.division, 'divisionFieldGroup', 'preview-divisionRow', 'preview-mobileDivisionRow');
+      setupToggle(toggles.specialtyOne, 'specialtyOneFieldGroup', 'preview-specialtyOneRow', 'preview-mobileSpecialtyOneRow');
+      setupToggle(toggles.specialtyTwo, 'specialtyTwoFieldGroup', 'preview-specialtyTwoRow', 'preview-mobileSpecialtyTwoRow');
+      setupToggle(toggles.office, 'officeFieldGroup', 'preview-officeRow', 'preview-mobileOfficeRow');
+      setupToggle(toggles.appointment, 'appointmentFieldGroup', 'preview-appointmentRow', 'preview-mobileAppointmentRow');
+      setupToggle(toggles.disclaimer, 'disclaimerFieldGroup', 'preview-disclaimerRow', 'preview-mobileDisclaimerRow');
+
+      // Add input listeners to all fields
+      Object.values(inputs).forEach(input => {
+        input.addEventListener('input', updatePreview);
+      });
+
+      // Copy to clipboard function
+      async function copySignature(sourceId, messageId) {
+        const signature = document.getElementById(sourceId);
+        const signatureClone = signature.cloneNode(true);
+        signatureClone.querySelectorAll('.hidden').forEach(el => el.remove());
+        
+        try {
+          const blob = new Blob([signatureClone.innerHTML], { type: 'text/html' });
+          const data = [new ClipboardItem({ 'text/html': blob })];
+          await navigator.clipboard.write(data);
+          const messageEl = document.getElementById(messageId);
+          messageEl.textContent = '✓ Signature copied successfully!';
+          setTimeout(() => { messageEl.textContent = ''; }, 3000);
+        } catch(e) {
+          console.error('Copy failed:', e);
+          document.getElementById(messageId).textContent = 'Copy failed — try selecting and copying manually.';
         }
+      }
+
+      // Copy button handlers
+      document.getElementById('copySignature').addEventListener('click', () => {
+        copySignature('signatureToCopy', 'copyMessage');
+      });
+
+      document.getElementById('copyMobileSignature').addEventListener('click', () => {
+        copySignature('mobileSignatureToCopy', 'copyMobileMessage');
+      });
+
+      // Initial preview update
+      updatePreview();
     });
-});
-
-function setupToggle(toggleId, desktopRowId, mobileRowId, fieldGroupId) {
-    const toggle = document.getElementById(toggleId);
-    if (!toggle) return;
-    toggle.addEventListener("change", () => {
-        const dr = document.getElementById(desktopRowId);
-        const mr = document.getElementById(mobileRowId);
-        const fg = document.getElementById(fieldGroupId);
-        if (dr) dr.classList.toggle("hidden", !toggle.checked);
-        if (mr) mr.classList.toggle("hidden", !toggle.checked);
-        if (fg) fg.classList.toggle("hidden", !toggle.checked);
-    });
-}
-
-setupToggle("toggleDivision","divisionRow","mobileDivisionRow","divisionFieldGroup");
-setupToggle("toggleSpecialtyOne","specialtyOneRow","mobileSpecialtyOneRow","specialtyOneFieldGroup");
-setupToggle("toggleSpecialtyTwo","specialtyTwoRow","mobileSpecialtyTwoRow","specialtyTwoFieldGroup");
-setupToggle("toggleOffice","officeRow","mobileOfficeRow","officeFieldGroup");
-setupToggle("toggleDisclaimer","disclaimerRow","mobileDisclaimerRow","disclaimerFieldGroup");
-
-const toggleAppointment = document.getElementById("toggleAppointment");
-const appointmentInput = document.getElementById("appointmentInput");
-toggleAppointment.addEventListener("change", () => {
-    document.getElementById("appointmentRow").classList.toggle("hidden", !toggleAppointment.checked);
-    document.getElementById("mobileAppointmentRow").classList.toggle("hidden", !toggleAppointment.checked);
-    document.getElementById("appointmentFieldGroup").classList.toggle("hidden", !toggleAppointment.checked);
-});
-appointmentInput.addEventListener("input", () => {
-    const value = appointmentInput.value || "#";
-    document.getElementById("sigAppointmentLink").href = value;
-    document.getElementById("mobileSigAppointmentLink").href = value;
-});
-
-async function copySignature(sourceId, messageId) {
-    const signature = document.getElementById(sourceId);
-    const signatureClone = signature.cloneNode(true);
-    signatureClone.querySelectorAll(".hidden").forEach(el => el.remove());
-    const blob = new Blob([signatureClone.innerHTML], { type: "text/html" });
-    try {
-        await navigator.clipboard.write([new ClipboardItem({ "text/html": blob })]);
-        document.getElementById(messageId).textContent = "✓ Signature copied successfully!";
-        setTimeout(() => { document.getElementById(messageId).textContent = ""; }, 3000);
-    } catch(e) {
-        document.getElementById(messageId).textContent = "Copy failed — try selecting and copying manually.";
-    }
-}
-
-document.getElementById("copySignature").addEventListener("click", () => copySignature("signatureToCopy","copyMessage"));
-document.getElementById("copyMobileSignature").addEventListener("click", () => copySignature("mobileSignatureToCopy","copyMobileMessage"));
-
-lucide.createIcons();
-</script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a183d7fa977f8141',t:'MTc4MzU2MzU2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </script>
+</body>
 </html>
