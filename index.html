@@ -36,7 +36,7 @@
               <label class="block mt-2 mb-1 font-bold text-sm">Division Name</label>
               <div class="flex items-center border border-gray-300 rounded-md">
                 <span class="px-3 py-3 text-sm text-gray-600 font-medium">Division of</span>
-                <input type="text" id="divisionInput" data-target="sigDivision" data-mobile-target="mobileSigDivision" placeholder="(e.g., Academic Affairs)" class="flex-1 p-3 border-none text-sm">
+                <input type="text" id="divisionInput" data-target="sigDivision" data-mobile-target="mobileSigDivision" data-optional="true" placeholder="(e.g., Academic Affairs)" class="flex-1 p-3 border-none text-sm">
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
             </div>
             <div id="specialtyOneFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 1</label>
-              <input type="text" data-target="sigSpecialtyOne" data-mobile-target="mobileSigSpecialtyOne" placeholder="Specialty or focus area" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigSpecialtyOne" data-mobile-target="mobileSigSpecialtyOne" data-optional="true" placeholder="Specialty or focus area" class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
           <div>
@@ -55,7 +55,7 @@
             </div>
             <div id="specialtyTwoFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Specialty Line 2</label>
-              <input type="text" data-target="sigSpecialtyTwo" data-mobile-target="mobileSigSpecialtyTwo" placeholder="Additional specialty or certification" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigSpecialtyTwo" data-mobile-target="mobileSigSpecialtyTwo" data-optional="true" placeholder="Additional specialty or certification" class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
           <div>
@@ -68,7 +68,7 @@
             </div>
             <div id="cellFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Cell Phone Number</label>
-              <input type="text" data-target="sigCell" data-mobile-target="mobileSigCell" placeholder="000-000-0000" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigCell" data-mobile-target="mobileSigCell" data-optional="true" placeholder="000-000-0000" class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
           <div>
@@ -85,7 +85,7 @@
             </div>
             <div id="officeFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Office Address</label>
-              <input type="text" data-target="sigOffice" data-mobile-target="mobileSigOffice" placeholder="Office Location" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigOffice" data-mobile-target="mobileSigOffice" data-optional="true" placeholder="Office Location" class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
           <div>
@@ -94,7 +94,7 @@
             </div>
             <div id="appointmentFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Appointment Link</label>
-              <input type="url" id="appointmentInput" placeholder="https://calendly.com/name/meeting" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="url" id="appointmentInput" data-optional="true" placeholder="https://calendly.com/name/meeting" class="w-full p-3 border border-gray-300 rounded-md text-sm">
               <p class="text-xs text-gray-500 mt-1">Paste a Calendly, Microsoft Bookings, or scheduling link.</p>
             </div>
           </div>
@@ -104,7 +104,7 @@
             </div>
             <div id="disclaimerFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Legal Disclaimer</label>
-              <input type="text" data-target="sigDisclaimer" data-mobile-target="mobileSigDisclaimer" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you have received this communication in error, please notify the sender immediately." class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigDisclaimer" data-mobile-target="mobileSigDisclaimer" data-optional="true" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you have received this communication in error, please notify the sender immediately." class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
             <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial, Helvetica, sans-serif; color:#222222; border-collapse:collapse;">
               <tbody>
                 <tr>
-                  <td style="vertical-align:top; padding-right:12px;"><img src="https://photos.smugmug.com/photos/i-355zzqk/0/LJW3K9RnhsqqdjsrNG2Vk7LGrK2wsT6McLrw35n7p/O/i-355zzqk.png" alt="Flagler College" style="width:80px; height:auto; display:block;"></td>
+                  <td style="vertical-align:top; padding-right:12px;"><img id="desktopSigLogo" src="https://photos.smugmug.com/photos/i-355zzqk/0/LJW3K9RnhsqqdjsrNG2Vk7LGrK2wsT6McLrw35n7p/O/i-355zzqk.png" alt="Flagler College" style="width:80px; height:auto; display:block;"></td>
                   <td style="vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
                     <div style="font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#7A0019; line-height:1.2;">
                       <span id="sigName">Full Name</span>
@@ -228,6 +228,10 @@
   </div>
 
   <script>
+    // Default and alternate logo URLs
+    const defaultLogo = "https://photos.smugmug.com/photos/i-355zzqk/0/LJW3K9RnhsqqdjsrNG2Vk7LGrK2wsT6McLrw35n7p/O/i-355zzqk.png";
+    const alternateLogo = "https://photos.smugmug.com/photos/i-NJLhDwc/0/LHnchX3M9ng79BGRv3KTnCNxQC5XTXj2SspFFXCJr/O/i-NJLhDwc.png";
+
     // Signature builder logic
     const fieldPairs = [
         ["sigName", "mobileSigName"], ["sigTitle", "mobileSigTitle"], ["sigDept", "mobileSigDept"],
@@ -236,6 +240,31 @@
         ["sigCell", "mobileSigCell"], ["sigEmail", "mobileSigEmail"], ["sigOffice", "mobileSigOffice"],
         ["sigMailing", "mobileSigMailing"], ["sigDisclaimer", "mobileSigDisclaimer"]
     ];
+
+    // Function to count filled optional fields
+    function countFilledOptionalFields() {
+        let count = 0;
+        const optionalInputs = document.querySelectorAll("input[data-optional='true']");
+        optionalInputs.forEach(input => {
+            // Only count if the field is visible (parent not hidden) and has a value
+            const parent = input.closest("div[id*='FieldGroup']") || input.closest("div[id*='Row']") || input.parentElement;
+            if (parent && !parent.classList.contains("hidden") && input.value.trim() !== "") {
+                count++;
+            }
+        });
+        return count;
+    }
+
+    // Function to update logo based on optional fields count
+    function updateLogoBasedOnFieldCount() {
+        const filledCount = countFilledOptionalFields();
+        const logoImg = document.getElementById("desktopSigLogo");
+        if (filledCount >= 2) {
+            logoImg.src = alternateLogo;
+        } else {
+            logoImg.src = defaultLogo;
+        }
+    }
 
     document.querySelectorAll("input[data-target]").forEach(input => {
         input.addEventListener("input", () => {
@@ -259,6 +288,8 @@
                 const mobileSigEmailInline = document.getElementById("mobileSigEmailInline");
                 if (mobileSigEmailInline) mobileSigEmailInline.textContent = value;
             }
+            // Update logo after any input change
+            updateLogoBasedOnFieldCount();
         });
     });
 
@@ -272,6 +303,8 @@
             if (dr) dr.classList.toggle("hidden", !toggle.checked);
             if (mr) mr.classList.toggle("hidden", !toggle.checked);
             if (fg) fg.classList.toggle("hidden", !toggle.checked);
+            // Update logo after toggle
+            updateLogoBasedOnFieldCount();
         });
     }
 
@@ -297,6 +330,8 @@
         document.getElementById("emailInlineRow").classList.toggle("hidden", showCell);
         document.getElementById("mobileEmailInlineRow").classList.toggle("hidden", showCell);
         document.getElementById("emailBelowRow").classList.toggle("hidden", !showCell);
+        // Update logo after toggle
+        updateLogoBasedOnFieldCount();
     });
 
     const toggleAppointment = document.getElementById("toggleAppointment");
@@ -305,11 +340,15 @@
         document.getElementById("appointmentRow").classList.toggle("hidden", !toggleAppointment.checked);
         document.getElementById("mobileAppointmentRow").classList.toggle("hidden", !toggleAppointment.checked);
         document.getElementById("appointmentFieldGroup").classList.toggle("hidden", !toggleAppointment.checked);
+        // Update logo after toggle
+        updateLogoBasedOnFieldCount();
     });
     appointmentInput.addEventListener("input", () => {
         const value = appointmentInput.value || "#";
         document.getElementById("sigAppointmentLink").href = value;
         document.getElementById("mobileSigAppointmentLink").href = value;
+        // Update logo after input
+        updateLogoBasedOnFieldCount();
     });
 
     async function copySignature(sourceId, messageId) {
