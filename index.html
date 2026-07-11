@@ -33,8 +33,11 @@
               <input type="checkbox" id="toggleDivision"> <span>Show division</span>
             </div>
             <div id="divisionFieldGroup" class="hidden">
-              <label class="block mt-2 mb-1 font-bold text-sm">Division</label>
-              <input type="text" data-target="sigDivision" data-mobile-target="mobileSigDivision" placeholder="Division Name" class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <label class="block mt-2 mb-1 font-bold text-sm">Division Name</label>
+              <div class="flex items-center border border-gray-300 rounded-md">
+                <span class="px-3 py-3 text-sm text-gray-600 font-medium">Division of</span>
+                <input type="text" id="divisionInput" data-target="sigDivision" data-mobile-target="mobileSigDivision" placeholder="(e.g., Academic Affairs)" class="flex-1 p-3 border-none text-sm">
+              </div>
             </div>
           </div>
           <div>
@@ -101,7 +104,7 @@
             </div>
             <div id="disclaimerFieldGroup" class="hidden">
               <label class="block mt-2 mb-1 font-bold text-sm">Legal Disclaimer</label>
-              <input type="text" data-target="sigDisclaimer" data-mobile-target="mobileSigDisclaimer" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed..." class="w-full p-3 border border-gray-300 rounded-md text-sm">
+              <input type="text" data-target="sigDisclaimer" data-mobile-target="mobileSigDisclaimer" placeholder="This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you have received this communication in error, please notify the sender immediately." class="w-full p-3 border border-gray-300 rounded-md text-sm">
             </div>
           </div>
         </div>
@@ -114,7 +117,7 @@
             <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial, Helvetica, sans-serif; color:#222222; border-collapse:collapse;">
               <tbody>
                 <tr>
-                  <td style="vertical-align:top; padding-right:12px;"><img src="https://www.dropbox.com/scl/fi/7ef45vp7chp0bc4264y3m/FlaglerCollege-DropFlag_Taller.png?rlkey=usxpb6uyfam57rdxrz2op8yvb&raw=1" alt="Flagler College" style="max-height:150px; width:auto; display:block; border:0;" loading="lazy"></td>
+                  <td style="vertical-align:top; padding-right:12px;"><img src="https://www.dropbox.com/scl/fi/7ef45vp7chp0bc4264y3m/FlaglerCollege-DropFlag_Taller.png?rlkey=usxpb6uyfam57rdxrz2op7evsf&raw=1" alt="Flagler College" style="width:80px; height:auto; display:block;"></td>
                   <td style="vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
                     <div style="font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#7A0019; line-height:1.2;">
                       <span id="sigName">Full Name</span>
@@ -126,7 +129,7 @@
                       <span id="sigDept">Department Name</span>
                     </div>
                     <div id="divisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;">
-                      <span id="sigDivision"></span>
+                      <span>Division of </span><span id="sigDivision"></span>
                     </div>
                     <div id="specialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;">
                       <span id="sigSpecialtyOne"></span>
@@ -135,10 +138,10 @@
                       <span id="sigSpecialtyTwo"></span>
                     </div>
                     <div style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; font-size:14px; line-height:1.5;">
-                      <strong>P:</strong> <span id="sigPhone">000-000-0000</span> <span id="cellInlineRow" class="hidden"> <span style="color:#999999;"> | </span> <strong>C:</strong> <span id="sigCell">000-000-0000</span> </span> <span id="emailInlineRow"> <span style="color:#999999;"> | </span> <strong>E:</strong> <a id="sigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="sigEmail">email@flagler.edu</span> </a> </span>
+                      <strong>P:</strong> <span id="sigPhone">000-000-0000</span> <span id="cellInlineRow" class="hidden"> <span style="color:#999999;"> | </span> <strong>C:</strong> <span id="sigCell"></span></span> <span id="emailInlineRow"> <span style="color:#999999;"> | </span> <strong>E:</strong> <a id="sigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="sigEmailInline">email@flagler.edu</span></a></span>
                     </div>
                     <div id="emailBelowRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.5;">
-                      <strong>E:</strong> <a id="sigEmailBelowLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="sigEmailBelow">email@flagler.edu</span> </a>
+                      <strong>E:</strong> <a id="sigEmailBelowLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="sigEmailBelow">email@flagler.edu</span></a>
                     </div>
                     <div style="font-family:Arial, Helvetica, sans-serif; margin-top:8px; font-size:13px; line-height:1.45;">
                       <div id="officeRow" class="hidden">
@@ -152,14 +155,14 @@
                       <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
                     </div>
                     <div id="appointmentRow" class="hidden" style="margin-top:10px;">
-                      <a id="sigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
+                      <a id="sigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; padding:8px 12px; border-radius:3px; font-weight:bold;">Book Appointment</a>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
             <div id="disclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
-              <span id="sigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you received this message in error, please notify the sender and delete it.</span>
+              <span id="sigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you have received this communication in error, please notify the sender immediately.</span>
             </div>
           </div>
         </div>
@@ -181,7 +184,7 @@
                 <span id="mobileSigDept">Department Name</span>
               </div>
               <div id="mobileDivisionRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333;">
-                <span id="mobileSigDivision"></span>
+                <span>Division of </span><span id="mobileSigDivision"></span>
               </div>
               <div id="mobileSpecialtyOneRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:4px;">
                 <span id="mobileSigSpecialtyOne"></span>
@@ -190,7 +193,7 @@
                 <span id="mobileSigSpecialtyTwo"></span>
               </div>
               <div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:10px;">
-                <strong>P:</strong> <span id="mobileSigPhone">000-000-0000</span> <span id="mobileCellInlineRow" class="hidden"> <span style="color:#999999;"> | </span> <strong>C:</strong> <span id="mobileSigCell">000-000-0000</span> </span> <br><strong>E:</strong> <a id="mobileSigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="mobileSigEmail">email@flagler.edu</span> </a>
+                <strong>P:</strong> <span id="mobileSigPhone">000-000-0000</span> <span id="mobileCellInlineRow" class="hidden"> <span style="color:#999999;"> | </span> <strong>C:</strong> <span id="mobileSigCell"></span></span> <span id="mobileEmailInlineRow"> <span style="color:#999999;"> | </span> <strong>E:</strong> <a id="mobileSigEmailLink" href="mailto:email@flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#222222; text-decoration:none;"> <span id="mobileSigEmailInline">email@flagler.edu</span></a></span>
               </div>
               <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333333; margin-top:8px;">
                 <div id="mobileOfficeRow" class="hidden">
@@ -204,13 +207,13 @@
                 <a href="https://www.flagler.edu" style="font-family:Arial, Helvetica, sans-serif; color:#7A0019; text-decoration:none; font-weight:bold;">www.flagler.edu</a>
               </div>
               <div id="mobileAppointmentRow" class="hidden" style="margin-top:10px;">
-                <a id="mobileSigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; font-weight:bold; padding:6px 12px; border-radius:3px;">Book Appointment</a>
+                <a id="mobileSigAppointmentLink" href="#" style="font-family:Arial, Helvetica, sans-serif; display:inline-block; background:#7A0019; color:#ffffff; text-decoration:none; font-size:12px; padding:8px 12px; border-radius:3px; font-weight:bold;">Book Appointment</a>
               </div>
               <div id="mobilePhotoRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:10px; line-height:1;">
-                <img src="https://www.dropbox.com/scl/fi/9pg13f1r4gdrret2cldlm/FC_2026-Horizontal_Drop_Flag_Logo-Email_mobile.png?rlkey=07t2p2fog3v06pc6pjd51gyni&raw=1" alt="Flagler College" style="max-height:45px; height:45px; width:auto; display:block; border:0;" loading="lazy">
+                <img src="https://www.dropbox.com/scl/fi/9pg13f1r4gdrret2cldlm/FC_2026-Horizontal_Drop_Flag_Logo-Email_mobile.png?rlkey=07t2p2fog3v06pc6pjd51gyni&raw=1" alt="Flagler College" style="width:100%; max-width:300px; height:auto; display:block;">
               </div>
               <div id="mobileDisclaimerRow" class="hidden" style="font-family:Arial, Helvetica, sans-serif; margin-top:14px; max-width:620px; font-size:10px; line-height:1.35; color:#666666; font-style:italic;">
-                <span id="mobileSigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you received this message in error, please notify the sender and delete it.</span>
+                <span id="mobileSigDisclaimer">This message and any attachments are intended only for the individual or entity to which they are addressed and may contain confidential information. If you have received this communication in error, please notify the sender immediately.</span>
               </div>
             </div>
           </div>
@@ -228,7 +231,7 @@
     // Signature builder logic
     const fieldPairs = [
         ["sigName", "mobileSigName"], ["sigTitle", "mobileSigTitle"], ["sigDept", "mobileSigDept"],
-        ["sigDivision", "mobileSigDivision"], ["sigSpecialtyOne", "mobileSigSpecialtyOne"],
+        ["sigSpecialtyOne", "mobileSigSpecialtyOne"],
         ["sigSpecialtyTwo", "mobileSigSpecialtyTwo"], ["sigPhone", "mobileSigPhone"],
         ["sigCell", "mobileSigCell"], ["sigEmail", "mobileSigEmail"], ["sigOffice", "mobileSigOffice"],
         ["sigMailing", "mobileSigMailing"], ["sigDisclaimer", "mobileSigDisclaimer"]
@@ -245,12 +248,16 @@
                 if (mt) mt.textContent = value;
             }
             if (input.dataset.target === "sigEmail") {
-                const emailBelow = document.getElementById("sigEmailBelow");
-                if (emailBelow) emailBelow.textContent = value;
+                const emailInline = document.getElementById("sigEmailInline");
+                if (emailInline) emailInline.textContent = value;
                 document.getElementById("sigEmailLink").href = "mailto:" + value;
                 document.getElementById("mobileSigEmailLink").href = "mailto:" + value;
+                const emailBelow = document.getElementById("sigEmailBelow");
+                if (emailBelow) emailBelow.textContent = value;
                 const emailBelowLink = document.getElementById("sigEmailBelowLink");
                 if (emailBelowLink) emailBelowLink.href = "mailto:" + value;
+                const mobileSigEmailInline = document.getElementById("mobileSigEmailInline");
+                if (mobileSigEmailInline) mobileSigEmailInline.textContent = value;
             }
         });
     });
@@ -288,6 +295,7 @@
         document.getElementById("cellInlineRow").classList.toggle("hidden", !showCell);
         document.getElementById("mobileCellInlineRow").classList.toggle("hidden", !showCell);
         document.getElementById("emailInlineRow").classList.toggle("hidden", showCell);
+        document.getElementById("mobileEmailInlineRow").classList.toggle("hidden", showCell);
         document.getElementById("emailBelowRow").classList.toggle("hidden", !showCell);
     });
 
